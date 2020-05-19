@@ -7,6 +7,9 @@ LABEL com.github.actions.color="red"
 
 LABEL maintainer="Alberto Gimeno <gimenete@gmail.com>"
 
+ARG RUBOCOP_VERSION
+ENV RUBOCOP_VERSION=${RUBOCOP_VERSION:+:$RUBOCOP_VERSION}
+
 ARG DEPENDENCIES
 ENV DEPENDENCIES ${DEPENDENCIES}
 
