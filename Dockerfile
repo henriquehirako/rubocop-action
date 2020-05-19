@@ -7,5 +7,8 @@ LABEL com.github.actions.color="red"
 
 LABEL maintainer="Alberto Gimeno <gimenete@gmail.com>"
 
+ARG DEPENDENCIES
+ENV DEPENDENCIES ${DEPENDENCIES}
+
 COPY lib /action/lib
 ENTRYPOINT ["/action/lib/entrypoint.sh"]
